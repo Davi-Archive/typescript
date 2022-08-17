@@ -1,12 +1,15 @@
 import express from 'express'
-
+import routes from './routes';
 const app = express();
 
-app.get("/", (req, res)=>{
+app.use(routes);
+
+
+/* app.get("/", (req, res)=>{
     res.json({
         Hello: 'Woorld'
     })
-})
+}) */
 
 app.listen(3000);
 
