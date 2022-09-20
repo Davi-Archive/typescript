@@ -10,5 +10,6 @@ routes.get("/", (req, res)=>{
 })
 
 routes.get('/user', UserController.index)
+routes.post('/user', UserController.index)
 
 export default routes;

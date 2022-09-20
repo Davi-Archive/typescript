@@ -14,7 +14,11 @@ interface IMessageDTO{
     message: IMailMessage;
 }
 
-class EmailService {
+interface IEmailService{
+    sendMail(request: IMessageDTO): void;
+}
+
+class EmailService implements IEmailService{
     sendMail({to, message}:IMessageDTO){
         console.log(`email enviado para ${to.name} e a mensage é:${message.subject}`)
     }
